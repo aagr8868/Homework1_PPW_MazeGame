@@ -38,7 +38,7 @@ public:
 	std::string ToRelativePosition(Position other);
 
 	// Convert this player to a string representation of their name and points
-//	std::string Stringify();
+	std::string Stringify();
 
 	// You may add other functions as needed/wanted
 

@@ -52,14 +52,19 @@ std::string Player::ToRelativePosition(Position other) // Needs to be Tested
 {
 	if (other.col == pos_.col && other.row == pos_.row - 1)
 		return "North";
-	else if (other.col == pos_.col && other_row == pos_.row + 1)
+	else if (other.col == pos_.col && other.row == pos_.row + 1)
 		return "South";
-	else if (other.col == pos_.col + 1 && other_row == pos_.row)
+	else if (other.col == pos_.col + 1 && other.row == pos_.row)
 		return "East";
-	else if (other.col == pos_.col - 1 && other_row == pos_.row)
+	else if (other.col == pos_.col - 1 && other.row == pos_.row)
 		return "West";
 	else
 		return "Invalid";
+}
+
+std::string Player::Stringify()
+{
+	return "Name: " + name_ + " Points: " + std::to_string(points_);
 }
 
 #endif //_PLAYER_CPP
