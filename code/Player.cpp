@@ -39,7 +39,31 @@ Player::Player(const std::string name, const bool is_human)
 
 void Player::ChangePoints(const int x)
 {
-	
+	points_ += x;
+}
+
+void Player::SetPosition(Position pos)
+{
+	pos_.row = pos.row;
+	pos_.col = pos.col;
+}
+
+std::string Player::ToRelativePosition(Position other) // Needs to be Tested
+{
+	if (other.col == pos_.col && other.row == pos_.row - 1)
+		return "North";
+	else if (other.col == pos_.col && other_row == pos_.row + 1)
+		return "South";
+	else if (other.col == pos_.col + 1 && other_row == pos_.row)
+		return "East";
+	else if (other.col == pos_.col - 1 && other_row == pos_.row)
+		return "West";
+	else
+		return "Invalid";
 }
 
 #endif //_PLAYER_CPP
+
+
+
+
