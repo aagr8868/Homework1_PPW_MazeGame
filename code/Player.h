@@ -16,7 +16,7 @@ struct Position {
 class Player {
 public:
 	// TODO: implement
-	// Player(const std::string name, const bool is_human);  // constructor
+	Player(const std::string name, const bool is_human);  // constructor
 	
 	// These are already implemented for you
 	std::string get_name() const {return name_; }  // inline member function
@@ -26,7 +26,7 @@ public:
 
 	// TODO: implement the following functions
 	// You MUST implement the following functions
-//	void ChangePoints(const int x);  
+	void ChangePoints(const int x);  
 
 	// set a new position for this player
 //	void SetPosition(Position pos);
