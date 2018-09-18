@@ -3,9 +3,7 @@
 
 #include "Player.h"
 #include <cstdlib>
-#include <time>
-
-srand(time(NULL));
+#include <ctime>
 
 Player::Player(const std::string name, const bool is_human)
 {
@@ -15,6 +13,8 @@ Player::Player(const std::string name, const bool is_human)
 	pos_.col = 0;
 	is_human_ = is_human;
 	
+	srand(time(0));
+
 	if (!is_human)
 	{
 		do
