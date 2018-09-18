@@ -1,5 +1,5 @@
 #include "Player.cpp"
-#include <iostram>
+#include <iostream>
 
 using namespace std;
 
@@ -16,7 +16,7 @@ int main ()
 	cout << "Starting Position: " << PP.row << " , " << PP.col << endl;
 	cout << "Starting Humanity: ";
 
-	if (P.is_human)
+	if (P.is_human())
 		cout << "TRUE";
 	else
 		cout << "False";
