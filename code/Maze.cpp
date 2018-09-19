@@ -3,20 +3,23 @@
 
 #include "Maze.h"
 
+// source of unicode:
+// https://unicode.org/emoji/charts/full-emoji-list.html
+
 std::string SquareTypeStringify(SquareType sq)
 {
 	if (sq == SquareType::Wall)
-		return "X";
+		return "\U0000274C";// Cross
 	else if (sq == SquareType::Exit)
-		return "O";
+		return "\U0001F354"; // Burger
 	else if (sq == SquareType::Empty)
-		return "_";
+		return "\U0001F532"; // Square
 	else if (sq == SquareType::Human)
-		return "H";
+		return "\U0001F468"; // Man
 	else if (sq == SquareType::Enemy)
-		return "@";
+		return "\U0001F432"; // Dragon Head
 	else if (sq == SquareType::Treasure)
-		return "$";
+		return "\U0001F4B0"; // Bag of Money
 	else
 		return "E";
 }
