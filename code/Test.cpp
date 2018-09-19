@@ -1,21 +1,26 @@
 #include "Player.cpp"
+#include "Maze.cpp"
 #include <iostream>
 
 using namespace std;
 
 int main ()
 {
-	Player P1("Aaron", false);
-	Player P2("Perrin", false);
-	Player P3("Chris", false);
-	Player P4("Dylan", true);
+	SquareType A, B, C, D, E, F;
 
-	Player arr[4] = {P1, P2, P3, P4};
-
-	for (int i = 0; i < 3; i++)
-	{
-		cout << i << endl;
-		cout << arr[i].Stringify() << endl;;
-	}
+	A = SquareType::Wall;
+	B = SquareType::Exit;
+	C = SquareType::Empty;
+	D = SquareType::Human;
+	E = SquareType::Enemy;
+	F = SquareType::Treasure;
+	
+	cout << "A: " << SquareTypeStringify (A) << endl;
+	cout << "B: " << SquareTypeStringify (B) << endl;
+	cout << "C: " << SquareTypeStringify (C) << endl;
+	cout << "D: " << SquareTypeStringify (D) << endl;
+	cout << "E: " << SquareTypeStringify (E) << endl;
+	cout << "F: " << SquareTypeStringify (F) << endl;
+	
 	return 0;
 }

@@ -3,12 +3,13 @@
 
 #include <vector>
 #include "Player.h"
+#include <string>
 
 // you may change this enum as you need
 enum class SquareType { Wall, Exit, Empty, Human, Enemy, Treasure };
 
 // TODO: implement
-// std::string SquareTypeStringify(SquareType sq);
+std::string SquareTypeStringify(SquareType sq);
 
 class Board {
 public:
